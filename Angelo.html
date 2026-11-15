@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Academic Hub</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fa;
+    color: #222;
+}
+
+header {
+    background: #102b50;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+nav {
+    background: #174477;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    font-weight: bold;
+}
+
+.hero {
+    background: #dce9f7;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #102b50;
+}
+
+.hero p {
+    line-height: 1.6;
+}
+
+.search {
+    text-align: center;
+    padding: 25px;
+}
+
+.search input {
+    width: 85%;
+    max-width: 500px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+section {
+    padding: 30px 7%;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #102b50;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #174477;
+}
+
+.card p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card a {
+    display: inline-block;
+    background: #174477;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.card a:hover {
+    background: #102b50;
+}
+
+.about {
+    background: #e4edf7;
+    line-height: 1.8;
+}
+
+footer {
+    background: #102b50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MY ACADEMIC HUB</h1>
+    <p>Knowledge | Projects | Assignments | Learning</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#homework">Homework</a>
+    <a href="#about">About</a>
+</nav>
+
+<div class="hero" id="home">
+    <h2>Welcome to My Academic Hub</h2>
+
+    <p>
+        A platform for sharing academic projects,
+        assignments, research and educational materials.
+        <br>
+        Access learning resources anytime and anywhere.
+    </p>
+</div>
+
+<div class="search">
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="Search projects and homework..."
+    onkeyup="searchProjects()">
+</div>
+
+<section id="projects">
+
+<h2>My Projects</h2>
+
+<div class="projects" id="projectList">
+
+    <div class="card">
+        <h3>Petroleum Engineering Project</h3>
+        <p>Research and academic work on petroleum exploration and production.</p>
+        <a href="" target="_blank">
+            View Project
+        </a>
+    </div>
+
+    <div class="card">
+        <h3>Geology Research</h3>
+        <p>Study of rocks, minerals and geological processes.</p>
+        <a href="documents/geology.pdf" target="_blank">
+            View Project
+        </a>
+    </div>
+
+</div>
+</section>
+
+<section id="homework">
+
+<h2>Homework & Assignments</h2>
+
+<div class="projects">
+
+    <div class="card">
+        <h3>Engineering Technology</h3>
+        <p>Eng.Tech exercises and solutions.</p>
+        <a href="https://baidooangel33.blogspot.com/2026/11/review-of-old-ghana-mali-and-songhai.html" target="_blank">
+            View Homework
+        </a>
+    </div>
+
+    <div class="card">
+        <h3>Engineering Technology Assignment</h3>
+        <p>Academic Engineering Technology questions and answers.</p>
+        <a href="documents/chemistry.pdf" target="_blank">
+            View Homework
+        </a>
+    </div>
+
+</div>
+</section>
+
+<section class="about" id="about">
+
+<h2>About This Website</h2>
+
+<p>
+My Academic Hub is an educational platform created
+to make academic projects, assignments and learning
+materials accessible to students, lecturers and the
+general public.
+</p>
+
+</section>
+
+<footer>
+    <p>© 2026 My Academic Hub. All Rights Reserved.</p>
+    <p>Education for Everyone.</p>
+</footer>
+
+<script>
+
+function searchProjects() {
+
+    let input = document.getElementById("searchInput")
+    .value.toLowerCase();
+
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(function(card) {
+
+        let content = card.innerText.toLowerCase();
+
+        if(content.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
